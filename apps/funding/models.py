@@ -28,9 +28,9 @@ class FundingWalletTransaction(models.Model):
     class Meta:
         ordering = ('timestamp',)
 
-    def save(self, *args, **kwargs):
-        self.usd = self.usd_value()
-        super(FundingWalletTransaction, self).save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     self.usd = self.usd_value()
+    #     super(FundingWalletTransaction, self).save(*args, **kwargs)
 
     def usd_value(self):
         try:
