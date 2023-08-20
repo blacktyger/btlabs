@@ -23,11 +23,15 @@ class FundingWalletTransaction(models.Model):
     method = models.CharField(max_length=10, blank=True, null=True)
     chain = models.CharField(max_length=10, blank=True, null=True)
     coin = models.CharField(max_length=10, blank=True, null=True)
+    usd = models.DecimalField(default=0, null=True, max_digits=16, decimal_places=2)
 
     class Meta:
         ordering = ('timestamp',)
 
-    @property
+    def save(self, *args, **kwargs):
+        self.usd = self.usd_value()
+        super(FundingWalletTransaction, self).save(*args, **kwargs)
+
     def usd_value(self):
         try:
             if self.coin.lower() == "epic":
