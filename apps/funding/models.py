@@ -31,7 +31,8 @@ class FundingWalletTransaction(models.Model):
     def save(self, *args, **kwargs):
         if self.coin.lower() == "epic":
             self.usd = self.usd_value()
-            super(FundingWalletTransaction, self).save(*args, **kwargs)
+
+        super(FundingWalletTransaction, self).save(*args, **kwargs)
 
     def usd_value(self):
         try:
