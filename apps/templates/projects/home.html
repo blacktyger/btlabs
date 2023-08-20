@@ -1,0 +1,55 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} EPIC-WEB Wallet {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="container-fluid py-4 p-4">
+    <div class="row min-vh-80 h-100">
+        <div class="col-12">
+
+            <div class="row justify-content-center">
+                <div class="col-12" style="max-width: 700px">
+{#                    <img src="{{ ASSETS_ROOT }}/images/giverofepic_logo_light.png" class="img-fluid my-3">#}
+                    <p class="fs-3 mt-3">
+                        Actively developed <b>BTLabs</b> projects:
+                    </p>
+                    <li><a href="/giverofepic"><span class="material-icons align-middle">arrow_forward</span> Giver Of Epic Faucet</a></li>
+                    <li><a href="/tipbot"> <span class="material-icons align-middle">arrow_forward</span> Telegram Tip-Bot</a></li>
+                    <li><a href="/epicweb"><span class="material-icons align-middle">arrow_forward</span> Epic-Web Wallet</a></li>
+
+                    <hr>
+                </div>
+            </div>
+
+           <!--            Funding Report -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-12" style="max-width: 700px">
+                    {% include 'projects/funding.html' %}
+                </div>
+            </div>
+
+           <!--            PAYMENT METHODS -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-12" style="max-width: 700px">
+                    {% include 'funding/payment_methods.html' %}
+                </div>
+            </div>
+
+            <!--            FOOTER -->
+            <div class="row justify-content-center">
+                <div class="col-12" style="max-width: 700px">
+                    {% include 'includes/footer.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

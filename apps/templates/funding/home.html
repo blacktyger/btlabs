@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} ECIP-T-05 {% endblock %}
+{% block title %} EPIC Tip-Bot {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -10,27 +10,20 @@
 <div class="container-fluid py-4 p-4">
     <div class="row min-vh-80 h-100">
         <div class="col-12">
-
-            <div class="row">
-               <div class="col-12 text-center">
-                    <img src="{{ ASSETS_ROOT }}/images/tipbot_banner.png" class="img-fluid">
-                    <hr>
-                </div>
-            </div>
-
             <div class="row justify-content-center">
                 <div class="col-12" style="max-width: 700px">
-                    <h1 class="font-weight-bold">Tip-Bot  & Web Wallet</h1>
+                    <img src="{{ ASSETS_ROOT }}/images/tipbot_banner.png" class="img-fluid my-3">
+
                     <p class="fs-4 mt-3">
-                        Introduce the power of the <b>Mimblewimble</b> with modern interface and no system requirements.
+                        Introduce <i class="fab fa-telegram mx-1"></i> <b>Telegram</b> in-chat tipping framework using a privacy focused
+                        cryptocurrency blockchain. Deposit, withdraw and send EPIC to users using built-in wallet.
                     </p>
-                    <p class="fs-4">
-                        More details:
-                        <a target="_blank" href="https://docs.google.com/document/d/1yedrwasNKc2jew8_5kZTJzWCPr4qXux6kJw3vxGIR-E/edit#">
-                            <span class="material-icons">description</span>
-                            ECIP-T-05 <span class="text-muted text-sm">(Google Docs)</span>
-                        </a>
+                    <hr>
+                    <p class="fs-5 mt-5">
+                        Project was successfully launched in April 2022 for the Epic Cash Community, growing rapidly since then -
+                        it has almost <b>900</b> active users, more than <b>5,000</b> transactions worth <b>70,000 EPIC</b>!
                     </p>
+
                     <div class="text-center mt-5">
                         <a href="https://t.me/epictipbot" target="_blank" style="width: 90%"
                            class="btn btn-lg btn-outline-primary shadow-primary text-dark">
@@ -39,6 +32,21 @@
                             - try now!
                         </a>
                     </div>
+
+                    <p class="fs-5 mt-3">
+                        Project is free to use, everyone can create an account or invite the bot to a Telegram group.
+                        Key features:
+                    </p>
+                    <li>VITE & EPIC Blockchain support</li>
+                    <li>Create and manage the wallet inside Telegram messenger app</li>
+                    <li>Deposit & withdraw assets</li>
+                    <li>Reward content creators, developers and other Telegram users</li>
+                    <li>Use as reward distribution system for events</li>
+
+                    <p class="fs-5 mt-3">
+                        Project is constantly updated with new a features, for more details check the Milestone section.
+                    </p>
+
                 </div>
             </div>
 
@@ -49,12 +57,16 @@
                 </div>
             </div>
 
-            <!--            FUNDING -->
-            <div class="row justify-content-center mt-5">
-                <div class="col-12" style="max-width: 700px">
-                    {% include 'funding/funding.html' %}
-                </div>
-            </div>
+            <hr />
+
+{#            <!--            FUNDING -->#}
+{#            <div class="row justify-content-center mt-5">#}
+{#                <div class="col-12" style="max-width: 700px">#}
+{#                    {% include 'funding/funding.html' %}#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <hr />#}
 
             <!--            PAYMENT METHODS -->
             <div class="row justify-content-center mt-5">

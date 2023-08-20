@@ -6,8 +6,8 @@ from django.db import models
 
 class FundingWalletBalance(models.Model):
     timestamp = models.DateTimeField(editable=True)
-    balances = models.JSONField(default=dict)
-    pending_transactions = models.IntegerField(default=0)
+    balances = models.JSONField(default=dict, null=True, blank=True)
+    pending_transactions = models.IntegerField(default=0, null=True)
 
     class Meta:
         ordering = ('timestamp',)
@@ -19,10 +19,9 @@ class FundingWalletBalance(models.Model):
 class FundingWalletTransaction(models.Model):
     timestamp = models.DateTimeField(editable=True)
     amount = models.DecimalField(default=0, null=True, max_digits=16, decimal_places=8)
-    height = models.IntegerField(default=0, null=True)
-    token = models.CharField(max_length=10, blank=True, null=True)
-    hash = models.CharField(max_length=512, null=True, blank=True)
-    data = models.JSONField(default=dict, null=True, blank=True)
+    method = models.CharField(max_length=10, blank=True, null=True)
+    chain = models.CharField(max_length=10, blank=True, null=True)
+    coin = models.CharField(max_length=10, blank=True, null=True)
 
     class Meta:
         ordering = ('timestamp',)
@@ -35,7 +34,7 @@ class FundingWalletTransaction(models.Model):
 
             if response.status_code == 200:
                 data = response.json()['results'][0]
-                return self.amount * Decimal(data[f'{self.token.lower()}_vs_usd'])
+                return self.amount * Decimal(data[f'{self.coin.lower()}_vs_usd'])
 
         except Exception as e:
             print(e)

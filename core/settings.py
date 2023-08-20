@@ -3,10 +3,8 @@ import environ
 import os
 
 
-if 'Win' in platform.system():
-    DEBUG = True
-else:
-    DEBUG = False
+DEBUG = True
+
 
 env = environ.Env(
     # set casting, default value
@@ -44,7 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     'apps.home.HomeConfig',
-    'apps.funding.FundingConfig'
+    'apps.projects.ProjectsConfig',
+    'apps.epicweb.EpicwebConfig',
+    'apps.funding.FundingConfig',
+    'apps.giverofepic.GiverofepicConfig',
     ]
 
 MIDDLEWARE = [

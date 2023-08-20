@@ -29,9 +29,14 @@ apps/static/assets/node_modules
 apps/static/assets/yarn.lock
 apps/static/assets/.temp
 
+/.idea
 /.gitignore
 /secret.py
 /apps/funding/js_api/secret.py
 /apps/authentication/migrations/
 /apps/home/migrations/
 /apps/funding/migrations/
+/apps/epicweb/migrations/
+/apps/giverofepic/migrations/
+/apps/projects/migrations/
+/staticfiles/
