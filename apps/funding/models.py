@@ -3,6 +3,8 @@ from decimal import Decimal
 import requests
 from django.db import models
 
+from core.utils import prices
+
 
 class FundingWalletBalance(models.Model):
     timestamp = models.DateTimeField(editable=True)
@@ -29,12 +31,10 @@ class FundingWalletTransaction(models.Model):
     @property
     def usd_value(self):
         try:
-            url = 'https://epic-radar.com/api/coingecko/'
-            response = requests.get(url=url)
-
-            if response.status_code == 200:
-                data = response.json()['results'][0]
-                return self.amount * Decimal(data[f'{self.coin.lower()}_vs_usd'])
+            if self.coin.lower() == "epic":
+                return self.amount * Decimal(prices())
+            else:
+                Decimal('0')
 
         except Exception as e:
             print(e)

@@ -8,7 +8,6 @@ def home(request):
     total = total_received_funds_in_usd()
     context = {
         'total': total,  # rounded in USD
-        # 'received_percent': received_in_percent(goal=7000),
         'total_received': 500,
         'milestone_giver': total,
         'milestone_giver_goal': 1000,
@@ -19,7 +18,6 @@ def home(request):
         'milestone_epicweb': 100,
         'milestone_epicweb_goal': 4000,
         'milestone_epicweb_in_percent': received_in_percent(1, 4000),
-        # 'milestone_goal': '1 000',
         'project_title': 'Projects',
         'total_payments': total_payments(),
         'last_update': FundingWalletBalance.objects.last().timestamp,
