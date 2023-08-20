@@ -57,7 +57,7 @@
                         </div>
                         <div class="text-end pt-1">
                             <p class="text-sm mb-0 text-capitalize">Giver Of Epic</p>
-                            <h4 class="mb-0">${{milestone_giver_goal}}</h4>
+                            <h4 class="mb-0 text-success">${{milestone_giver_goal}}</h4>
                         </div>
                     </div>
                     <hr class="dark horizontal my-0" />
@@ -75,7 +75,7 @@
 
                                     <div class="col-6 text-end">
                                         <p class="mb-0 text-xs font-weight-bold">
-                                            <span class=" text-warning">${{ milestone_giver }}</span>
+                                            <span class=" text-success">${{ milestone_giver }}</span>
                                                 /
                                             <span class=" text-dark">{{ milestone_giver_goal }} </span>
                                         </p>
@@ -83,7 +83,7 @@
                                 </div>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar bg-gradient-warning" style="width: {{ milestone_giver_in_percent }}%;" role="progressbar"
+                                <div class="progress-bar bg-gradient-success" style="width: {{ milestone_giver_in_percent }}%;" role="progressbar"
                                      aria-valuenow="{{ milestone_giver_in_percent }}" aria-valuemin="0" aria-valuemax="100">
                                 </div>
                             </div>

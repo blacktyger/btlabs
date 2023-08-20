@@ -10,10 +10,9 @@ def home(request):
 
     context = {
         'total': total,  # rounded in USD
-        'total_received': 500,
-        'milestone_giver': total,
+        'milestone_giver': '1080',
         'milestone_giver_goal': 1000,
-        'milestone_giver_in_percent': received_in_percent(total, 1000),
+        'milestone_giver_in_percent': received_in_percent(1080, 1000),
         'milestone_tipbot': 1,
         'milestone_tipbot_goal': 2000,
         'milestone_tipbot_in_percent': received_in_percent(1, 2000),
