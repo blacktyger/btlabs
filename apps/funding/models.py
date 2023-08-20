@@ -23,7 +23,7 @@ class FundingWalletTransaction(models.Model):
     method = models.CharField(max_length=10, blank=True, null=True)
     chain = models.CharField(max_length=10, blank=True, null=True)
     coin = models.CharField(max_length=10, blank=True, null=True)
-    usd = models.DecimalField(default=0, null=True, max_digits=16, decimal_places=2)
+    # usd = models.DecimalField(default=0, null=True, max_digits=16, decimal_places=2)
 
     class Meta:
         ordering = ('timestamp',)
