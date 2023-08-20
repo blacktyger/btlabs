@@ -3,8 +3,6 @@ import json
 
 import requests
 
-from apps.funding.models import FundingWalletTransaction
-
 
 def prices():
     try:
@@ -17,27 +15,5 @@ def prices():
         return Decimal('0')
 
 
-def total_payments():
-    return FundingWalletTransaction.objects.count()
-
-
 def received_in_percent(amount, goal):
     return round(amount / float(goal) * 100, 1)
-
-
-def total_received_in_percent(goal):
-    return round(total_received_funds_in_usd() / float(goal) * 100, 1)
-
-
-def total_received_funds_in_usd():
-    amount = balance_from_transactions() * prices()
-    return int(amount)
-
-
-def transaction_history():
-    return FundingWalletTransaction.objects.filter(amount__gt=0.9).order_by('-timestamp')
-
-
-def balance_from_transactions():
-    txs = transaction_history()
-    return Decimal(sum([tx.amount for tx in txs]))

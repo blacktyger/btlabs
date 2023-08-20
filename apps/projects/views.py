@@ -1,11 +1,13 @@
 from django.shortcuts import render
 
-from apps.funding.models import FundingWalletBalance
-from core.utils import received_in_percent, total_received_funds_in_usd, total_payments, transaction_history
+from apps.funding.models import FundingWalletBalance, FundingWalletTransaction
+from core.utils import received_in_percent
 
 
 def home(request):
-    total = total_received_funds_in_usd()
+    tx_model = FundingWalletTransaction
+    total = tx_model.total_received_funds_in_usd()
+
     context = {
         'total': total,  # rounded in USD
         'total_received': 500,
