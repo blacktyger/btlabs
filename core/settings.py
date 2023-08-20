@@ -142,5 +142,12 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# PRODUCTION
+if os.environ['PRODUCTION'] == 'true':
+    print(f"RUN IN PRODUCTION MODE")
+    DEBUG = False
+    STATIC_ROOT = "/var/www/html/btlabs.tech/staticfiles/"
+
 #############################################################
 #############################################################
