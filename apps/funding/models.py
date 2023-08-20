@@ -1,6 +1,5 @@
 from decimal import Decimal
 
-import requests
 from django.db import models
 
 from core.utils import prices

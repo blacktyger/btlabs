@@ -21,9 +21,9 @@ def home(request):
         'milestone_epicweb_goal': 4000,
         'milestone_epicweb_in_percent': received_in_percent(1, 4000),
         'project_title': 'Projects',
-        'total_payments': total_payments(),
+        'total_payments': tx_model.total_payments(),
         'last_update': FundingWalletBalance.objects.last().timestamp,
-        'history': transaction_history(),
+        'history': tx_model.transaction_history(),
         }
 
     html_template = 'projects/home.html'
