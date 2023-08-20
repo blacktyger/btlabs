@@ -5,29 +5,20 @@ import os
 
 DEBUG = True
 
-
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, True)
-    )
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Take environment variables from .env file
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
-
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY', default='S#dsaqw2323434244%&%^7$%67%54^%Y^%h')
+SECRET_KEY = 'S#dsaqw23234342kl;j44%&%^7$%67%54^%Y^%h'
 
 # Assets Management
 ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets')
 HOME_ASSET_ROOT = '/static/home_assets'
 
 # load production server from .env
-ALLOWED_HOSTS = ['*', 'localhost', 'btlabs.tech', 'www.btlabs.tech', '127.0.0.1', env('SERVER', default='127.0.0.1')]
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1', 'https://' + env('SERVER', default='127.0.0.1'), 'https://www.btlabs.tech', 'https://btlabs.tech']
+ALLOWED_HOSTS = ['*', 'localhost', 'btlabs.tech', 'www.btlabs.tech', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1', 'https://www.btlabs.tech', 'https://btlabs.tech']
 
 # Application definition
 
