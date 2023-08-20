@@ -6,7 +6,7 @@ from core.utils import received_in_percent
 
 def home(request):
     tx_model = FundingWalletTransaction
-    total = tx_model.balance_from_transactions_usd()
+    total = float(tx_model.balance_from_transactions_usd())
 
     context = {
         'total': total,  # rounded in USD
