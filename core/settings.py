@@ -144,7 +144,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # PRODUCTION
-if os.environ['PRODUCTION'] == 'true':
+if 'PRODUCTION' in os.environ and os.environ['PRODUCTION'] == 'true':
     print(f"RUN IN PRODUCTION MODE")
     DEBUG = False
     STATIC_ROOT = "/var/www/html/btlabs.tech/staticfiles/"
