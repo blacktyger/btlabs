@@ -29,8 +29,9 @@ class FundingWalletTransaction(models.Model):
         ordering = ('timestamp',)
 
     def save(self, *args, **kwargs):
-        self.usd = self.usd_value()
-        super(FundingWalletTransaction, self).save(*args, **kwargs)
+        if self.coin.lower() == "epic":
+            self.usd = self.usd_value()
+            super(FundingWalletTransaction, self).save(*args, **kwargs)
 
     def usd_value(self):
         try:
