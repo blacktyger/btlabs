@@ -14,7 +14,6 @@ env = environ.Env(
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(CORE_DIR)
 
 # Take environment variables from .env file
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
@@ -28,7 +27,7 @@ HOME_ASSET_ROOT = '/static/home_assets'
 
 # load production server from .env
 ALLOWED_HOSTS = ['*', 'localhost', 'localhost:85', '127.0.0.1', env('SERVER', default='127.0.0.1')]
-CSRF_TRUSTED_ORIGINS = ['*', 'http://localhost:85', 'http://127.0.0.1', 'https://' + env('SERVER', default='127.0.0.1')]
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1', 'https://' + env('SERVER', default='127.0.0.1')]
 
 # Application definition
 
