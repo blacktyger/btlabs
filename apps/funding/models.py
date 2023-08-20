@@ -28,9 +28,9 @@ class FundingWalletTransaction(models.Model):
     class Meta:
         ordering = ('timestamp',)
 
-    # def save(self, *args, **kwargs):
-    #     self.usd = self.usd_value()
-    #     super(FundingWalletTransaction, self).save(*args, **kwargs)
+    def save(self, *args, **kwargs):
+        self.usd = self.usd_value()
+        super(FundingWalletTransaction, self).save(*args, **kwargs)
 
     def usd_value(self):
         try:
@@ -45,12 +45,7 @@ class FundingWalletTransaction(models.Model):
 
     @classmethod
     def total_received_in_percent(cls, goal):
-        return round(cls.total_received_funds_in_usd() / float(goal) * 100, 1)
-
-    @classmethod
-    def total_received_funds_in_usd(cls):
-        amount = cls.balance_from_transactions() * prices()
-        return int(amount)
+        return round(float(cls.balance_from_transactions_usd()) / float(goal) * 100, 1)
 
     @classmethod
     def transaction_history(cls):
@@ -61,9 +56,9 @@ class FundingWalletTransaction(models.Model):
         return cls.objects.count()
 
     @classmethod
-    def balance_from_transactions(cls):
+    def balance_from_transactions_usd(cls):
         txs = cls.transaction_history()
-        return Decimal(sum([tx.amount for tx in txs]))
+        return Decimal(sum([tx.usd for tx in txs]))
 
     def __str__(self):
         return f"Transaction [{self.timestamp.strftime('%d-%m-%Y %H:%M')}]"
