@@ -5,13 +5,14 @@ from core.utils import received_in_percent, total_received_funds_in_usd, total_p
 
 
 def home(request):
+    total = total_received_funds_in_usd()
     context = {
-        'total': total_received_funds_in_usd(),  # rounded in USD
+        'total': total,  # rounded in USD
         # 'received_percent': received_in_percent(goal=7000),
         'total_received': 500,
-        'milestone_giver': 242,
+        'milestone_giver': total,
         'milestone_giver_goal': 1000,
-        'milestone_giver_in_percent': received_in_percent(242, 1000),
+        'milestone_giver_in_percent': received_in_percent(total, 1000),
         'milestone_tipbot': 1,
         'milestone_tipbot_goal': 2000,
         'milestone_tipbot_in_percent': received_in_percent(1, 2000),
