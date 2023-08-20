@@ -26,7 +26,7 @@ class FundingWalletTransaction(models.Model):
     usd = models.DecimalField(default=0, null=True, max_digits=16, decimal_places=2)
 
     class Meta:
-        ordering = ('timestamp',)
+        ordering = ('-timestamp',)
 
     def save(self, *args, **kwargs):
         if self.coin.lower() == "epic":
