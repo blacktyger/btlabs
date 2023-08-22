@@ -20,13 +20,10 @@
 <div class="container-fluid py-4 p-4">
     <div class="row min-vh-80 h-100">
         <div class="col-12">
-
-            <div class="row justify-content-center">
+            <div class="row justify-content-center pb-5">
                 <div class="col-12" style="max-width: 700px">
-{#                    <img src="{{ ASSETS_ROOT }}/images/giverofepic_logo_light.png" class="img-fluid my-3">#}
                     <p class="fs-4 mt-3 mb-1">
                         <span class="material-icons fs-2 text-success align-middle mb-2">check_circle_outline</span>
-{#                        <i class="fa-regular fa-circle-check fs-3 text-success"></i>#}
                         Live Projects:
                     </p>
                     <li><a href="/tipbot"><i class="fa-brands fa-telegram"></i> Epic Tip-Bot</a>
@@ -74,14 +71,14 @@
            <!--            Funding Report -->
             <div class="row justify-content-center mt-5">
                 <div class="col-12" style="max-width: 700px">
-                    {% include 'projects/funding.html' %}
+                    {% include 'projects/funding_report.html' %}
                 </div>
             </div>
 
            <!--            PAYMENT METHODS -->
             <div class="row justify-content-center mt-5">
                 <div class="col-12" style="max-width: 700px">
-                    {% include 'funding/payment_methods.html' %}
+                    {% include 'projects/payment_methods.html' %}
                 </div>
             </div>
 
