@@ -33,10 +33,13 @@ apps/static/assets/.temp
 /.gitignore
 /secret.py
 /apps/funding/js_api/secret.py
-/apps/authentication/migrations/
 /apps/home/migrations/
 /apps/funding/migrations/
 /apps/epicweb/migrations/
-/apps/giverofepic/migrations/
 /apps/projects/migrations/
+/apps/easyminer/migrations/
+/apps/epicradar/migrations/
+/apps/miningcalc/migrations/
+/apps/giverofepic/migrations/
+/apps/authentication/migrations/
 /staticfiles/

@@ -3,10 +3,21 @@
 {% block title %} EPIC-WEB Wallet {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+
+{% block stylesheets %}
+    <style>
+        .bg-blue {
+            {#color: #badce3;#}
+            background: conic-gradient(from 315deg at 80% 60%, #5ba3a8, #4c929b, #306d7e, #1b4a61, #133c54);
+        }
+
+        .bg-green {
+            background: conic-gradient(from 225deg at 80% 50%, #1e6e12, #1c6b12, #176213, #135716, #134a1a, #123f1b, #11361a, #10331a);
+        }
+    </style>
+{% endblock stylesheets %}
 
 {% block content %}
-
 <div class="container-fluid py-4 p-4">
     <div class="row min-vh-80 h-100">
         <div class="col-12">
@@ -14,14 +25,50 @@
             <div class="row justify-content-center">
                 <div class="col-12" style="max-width: 700px">
 {#                    <img src="{{ ASSETS_ROOT }}/images/giverofepic_logo_light.png" class="img-fluid my-3">#}
-                    <p class="fs-3 mt-3">
-                        Actively developed <b>BTLabs</b> projects:
+                    <p class="fs-4 mt-3 mb-1">
+                        <span class="material-icons fs-2 text-success align-middle mb-2">check_circle_outline</span>
+{#                        <i class="fa-regular fa-circle-check fs-3 text-success"></i>#}
+                        Live Projects:
                     </p>
-                    <li><a href="/giverofepic"><span class="material-icons align-middle">arrow_forward</span> Giver Of Epic Faucet</a></li>
-                    <li><a href="/tipbot"> <span class="material-icons align-middle">arrow_forward</span> Telegram Tip-Bot</a></li>
-                    <li><a href="/epicweb"><span class="material-icons align-middle">arrow_forward</span> Epic-Web Wallet</a></li>
+                    <li><a href="/tipbot"><i class="fa-brands fa-telegram"></i> Epic Tip-Bot</a>
+                        <span>- Telegram Tipping Bot</span>
+                    </li>
+                    <li><a href="/epicradar"><i class="fa-brands fa-telegram"></i> Epic-Radar Bot</a>
+                        <span>- Telegram Utility Bot</span>
+                    </li>
+                    <li><a href="https://docs.epic.tech" target="_blank"><i class="fa-solid fa-book"></i> Epic Docs</a>
+                        <span>- Materials for Epic Developers</span>
+                    </li>
 
-                    <hr>
+                    <hr class="mt-2 w-75">
+
+                    <p class="fs-4 mt-4 mb-1">
+                        <span class="material-icons fs-3">manage_history</span>
+                        In Development:
+                    </p>
+                    <li><a href="/giverofepic"><i class="fa-solid fa-faucet"></i> Giver Of Epic</a>
+                        <span>- Cryptocurrency Faucet</span>
+                    </li>
+                    <li><a href="/epicweb"><i class="fa-solid fa-wallet"></i> Epic-Web Wallet</a>
+                        <span>- Web Browser Wallet</span>
+                    </li>
+                    <li><a href="/miningcalc"><i class="fa-solid fa-calculator me-1"></i> Mining Calculator</a>
+                        <span>- Epic Mining Calculator</span>
+                    </li>
+                    <li><a href="https://github.com/blacktyger/epic-py" target="_blank"><i class="fa-brands fa-python"></i> PythonSDK</a>
+                        <span>- Epic Python Developers Tool Kit</span>
+                    </li>
+
+                    <hr class="mt-2 w-75">
+
+                    <p class="fs-4 mt-4 mb-1">
+                        <span class="material-icons fs-3">tips_and_updates</span>
+                        Project Proposals:
+                    </p>
+                    <li><a href="/easyminer"><i class="fa-solid fa-server"></i> Epic Easy Miner</a>
+                        <span>- Epic Mining Manager</span>
+                    </li>
+
                 </div>
             </div>
 
@@ -48,7 +95,6 @@
         </div>
     </div>
 </div>
-
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->

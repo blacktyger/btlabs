@@ -1,0 +1,91 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} EPIC-WEB Wallet {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="container-fluid py-4 p-4">
+    <div class="row min-vh-80 h-100">
+        <div class="col-12">
+            <div class="row justify-content-center">
+                <div class="col-12" style="max-width: 700px">
+                    <img src="{{ ASSETS_ROOT }}/images/logo-horizontal-big.png" class="img-fluid my-3">
+
+                    <p class="fs-4 mt-3">
+                        <b>EPIC</b> Mining and Node Manager
+                    </p>
+                    <hr>
+                    <p class="mt-2">
+                        Cross-platform and <b>user-friendly</b> mining manager working with the <b>EPIC Blockchain Protocol</b>.
+                    </p>
+
+                    <p>
+                        <b>Easy Miner<sup>v3</sup></b> will continue its mission from the previous versions, that is to deliver an
+                        EPIC mining manager application easy to use for everyone.
+                        The <b>EPIC Proof Of Work</b> polyphasic design unlocks multiple ways to mine blocks and can be used with
+                        different types of hardware or software, example scenarios:
+                    </p>
+
+                    <li>Solo mining</li>
+                    <li>Pool mining (multiple options)</li>
+                    <li>CPU mining (RandomX)</li>
+                    <li>GPU mining (ProgPoW)</li>
+                    <li>ASIC mining (Cuckoo)</li>
+                    <li>Dual mining (1 algo, 2 coins)</li>
+                    <li>Multiple operating systems</li>
+                    <li>Multiple mining software options</li>
+
+                    <p class="mt-3">
+                        In order to start mining user have to go through the above checklist and work out which combination is right for him.
+                        It will be different in each case and will depend on rig power (hashrate), PoW algorithm,
+                        hardware manufacturer, location and other smaller factors.
+                        To make <b>Easy Miner</b> indeed easy, we have to automate this process as much as possible while maintaining
+                        the flexibility of the <b>EPIC</b> blockchain design. For this purpose application will collect required entry data:
+                    </p>
+
+                    <li>Model and make of GPU (automated)</li>
+                    <li>Model and make of CPU (automated)</li>
+                    <li>Operating system (automated)</li>
+
+                    <p class="mt-3">
+                        This will be used to prepare recommended mining software, estimate rig power and yield.
+                        <b>Easy Miner</b> will also help to connect to the right mining pool.
+                    </p>
+
+                    <p class="mt-2">
+                        At start application will support pool mining over solo for the following reasons:
+                    </p>
+
+                    <li>No need for user to host EPIC node</li>
+                    <li>No need for user to setup EPIC wallet before mining</li>
+                    <li>Suitable for all rigs and machines (solo requires powerful equipment)</li>
+                    <li>Payouts are made often and income is predictable</li>
+
+                    <p class="mt-3">
+                        <p>The <b>Setup-wizard</b> will provide step-by-step help for the new users, from how to configure mining software to making an account at the pool website.</p>
+                        <p>The <b>Pool Dashboard</b> will provide data for better understanding how to help network with spreading hashpower evenly between available pools. Users will easily switch between pools to i.e. compare efficiency.</p>
+                        <p>The <b>Mining Calculator</b> will provide estimates about rig yield and will help to work out electricity and other costs for more precise calculations.</p>
+                    <p>The <b>Update Manager</b> will take care of any updates - <b>Easy Miner</b> is managing multiple independent software, this manager will check them and update whenever needed.</p>
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!--            FOOTER -->
+            <div class="row justify-content-center">
+                <div class="col-12" style="max-width: 700px">
+                    {% include 'includes/footer.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

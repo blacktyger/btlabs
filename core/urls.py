@@ -16,6 +16,10 @@ urlpatterns = [
     path("projects/", include("apps.projects.urls")),
     path("tipbot/", include("apps.funding.urls")),
     path("epicweb/", include("apps.epicweb.urls")),
+    path("easyminer/", include("apps.easyminer.urls")),
+    path("epicradar/", include("apps.epicradar.urls")),
+    path("miningcalc/", include("apps.miningcalc.urls")),
     path("giverofepic/", include("apps.giverofepic.urls")),
+
     path("", include("apps.home.urls"))
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

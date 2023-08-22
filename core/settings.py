@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     'apps.projects.ProjectsConfig',
     'apps.epicweb.EpicwebConfig',
     'apps.funding.FundingConfig',
+    'apps.easyminer.EasyminerConfig',
+    'apps.miningcalc.MiningcalcConfig',
+    'apps.epicradar.EpicradarConfig',
     'apps.giverofepic.GiverofepicConfig',
     ]
 

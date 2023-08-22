@@ -1,4 +1,4 @@
-{% load humanize %}
+{% load humanize %} {%  load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,8 +6,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ ASSETS_ROOT }}/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="{{ ASSETS_ROOT }}/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{%  static 'apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" href="{%  static 'favicon.png' %}">
   <title>{% block title %}{% endblock %} | `blacktyg3r</title>
   <!--     Fonts and icons     -->
     <!-- Vendor CSS Files -->
@@ -19,17 +19,17 @@
   <link href="{{ ASSETS_ROOT }}/css/nucleo-icons.css" rel="stylesheet" />
   <link href="{{ ASSETS_ROOT }}/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/d60f5a0aa7.js" crossorigin="anonymous"></script>
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ ASSETS_ROOT }}/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ ASSETS_ROOT }}/style.css" rel="stylesheet" />
 
   {% block stylesheets %}{% endblock stylesheets %}
 
-</head> 
+</head>
 <body class="g-sidenav-show bg-gray-200">
   
 
