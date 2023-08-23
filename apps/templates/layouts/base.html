@@ -4,34 +4,37 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="{%  static 'apple-touch-icon.png' %}">
-  <link rel="icon" type="image/png" href="{%  static 'favicon.png' %}">
-  <title>{% block title %}{% endblock %} | `blacktyg3r</title>
-  <!--     Fonts and icons     -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{%  static 'assets/images/favicon-32x32.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{%  static 'assets/images/apple-touch-icon.png' %}">
+    <title>{% block title %}{% endblock %} | BTLabs.tech</title>
+
     <!-- Vendor CSS Files -->
     <link href="{{ ASSETS_ROOT }}/btlabs/vendor/aos/aos.css" rel="stylesheet">
     <link href="{{ ASSETS_ROOT }}/btlabs/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="{{ ASSETS_ROOT }}/btlabs/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-  <!-- Nucleo Icons -->
-  <link href="{{ ASSETS_ROOT }}/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="{{ ASSETS_ROOT }}/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/d60f5a0aa7.js" crossorigin="anonymous"></script>
-  <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-  <!-- CSS Files -->
-  <link id="pagestyle" href="{{ ASSETS_ROOT }}/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="{{ ASSETS_ROOT }}/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+
+    <!-- Nucleo Icons -->
+    <link href="{{ ASSETS_ROOT }}/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="{{ ASSETS_ROOT }}/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/d60f5a0aa7.js" crossorigin="anonymous"></script>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="{{ ASSETS_ROOT }}/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   {% block stylesheets %}{% endblock stylesheets %}
 
 </head>
 <body class="g-sidenav-show bg-gray-200">
-  
 
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
   
@@ -40,7 +43,7 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero">
         <div class="hero-container">
-            <a href="/projects" class="hero-logo mt-2 pt-5" data-aos="zoom-in">
+            <a href="https://btlabs.tech" class="hero-logo mt-2 pt-5" data-aos="zoom-in">
                 <img src="{{ ASSETS_ROOT }}/btlabs/img/500px-logo-dark.png" width="60%" alt="">
             </a>
         </div>
